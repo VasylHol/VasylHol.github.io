@@ -1,5 +1,5 @@
-import useMoviesStore from 'stores/movies'
+import useMoviesStore from "stores/movies";
 
 export default {
-    movies: useMoviesStore
-}
+  movies: useMoviesStore,
+};

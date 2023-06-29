@@ -1,30 +1,29 @@
 <template>
   <q-page padding>
-    <div style="font-size: 32px;">{{ $t('homePageTitle') }}</div>
+    <div style="font-size: 32px">{{ $t("homePageTitle") }}</div>
     <popular-movies-table />
   </q-page>
 </template>
 
 <script>
-import { defineComponent } from 'vue'
-import stores from 'stores/stores';
-import PopularMoviesTable from 'src/components/organisms/PopularMoviesTable.vue';
+import { defineComponent } from "vue";
+import stores from "stores/stores";
+import PopularMoviesTable from "src/components/organisms/PopularMoviesTable.vue";
 export default defineComponent({
-  name: 'home-page',
+  name: "home-page",
   components: {
-    PopularMoviesTable
+    PopularMoviesTable,
   },
   setup() {
-    const moviesStore = stores.movies()
+    const moviesStore = stores.movies();
     return {
-      moviesStore
-    }
+      moviesStore,
+    };
   },
   methods: {
     resetStore() {
-      this.moviesStore.$reset()
-    }
+      this.moviesStore.$reset();
+    },
   },
-
-})
+});
 </script>
