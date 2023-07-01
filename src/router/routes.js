@@ -1,6 +1,6 @@
 const routes = [
   {
-    path: "VasylHol.github.io",
+    path: "/",
     component: () => import("layouts/MainLayout.vue"),
     children: [
       {
